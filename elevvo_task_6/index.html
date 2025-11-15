@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freelance Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <h2 class="logo">ClientDash</h2>
+    <ul>
+      <li data-page="overview">Overview</li>
+      <li data-page="projects">Projects</li>
+      <li data-page="profile">Profile</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <header class="topbar">Freelance Admin Dashboard</header>
+
+    <!-- PAGE: OVERVIEW -->
+    <section id="overview" class="page active">
+      <h1>Overview</h1>
+
+      <div class="cards">
+        <div class="card"><h3>Total Projects</h3><p>12</p></div>
+        <div class="card"><h3>Total Earnings</h3><p>$4,800</p></div>
+        <div class="card"><h3>Tasks Due</h3><p>5</p></div>
+      </div>
+
+      <div class="chart-area">
+        <canvas id="earnChart"></canvas>
+      </div>
+
+      <h2>Recent Activity</h2>
+      <ul class="activity">
+        <li>✔ Completed "Website Redesign"</li>
+        <li>✎ Updated task deadlines</li>
+        <li>➕ Added new project "Marketing Automation"</li>
+      </ul>
+    </section>
+
+    <!-- PAGE: PROJECTS -->
+    <section id="projects" class="page">
+      <h1>Projects</h1>
+      <table>
+        <tr><th>Project Name</th><th>Status</th><th>Deadline</th></tr>
+        <tr><td>Website Redesign</td><td>Completed</td><td>Jan 10</td></tr>
+        <tr><td>Branding Kit</td><td>In Progress</td><td>Jan 22</td></tr>
+        <tr><td>Marketing Automation</td><td>Pending</td><td>Feb 5</td></tr>
+      </table>
+    </section>
+
+    <!-- PAGE: PROFILE -->
+    <section id="profile" class="page">
+      <h1>Profile Settings</h1>
+      <form class="profile-form">
+        <label>Name</label>
+        <input type="text" placeholder="Enter name" />
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter email" />
+
+        <label>Password</label>
+        <input type="password" placeholder="********" />
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
